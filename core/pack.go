@@ -200,7 +200,8 @@ func (pack Pack) GetCompatibleLoaders() (loaders []string) {
 	}
 	if _, hasNeoForge := pack.Versions["neoforge"]; hasNeoForge {
 		loaders = append(loaders, "neoforge")
-		loaders = append(loaders, "forge") // Backwards-compatible; for now (could be configurable later)
+		loaders = append(loaders, "fabric")
+
 	} else if _, hasForge := pack.Versions["forge"]; hasForge {
 		loaders = append(loaders, "forge")
 	}
